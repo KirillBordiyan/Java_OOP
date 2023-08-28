@@ -2,6 +2,7 @@ package org.example.lectur;
 
 
 import java.nio.channels.Pipe;
+import java.util.ArrayList;
 
 /*правильное:
 план - реализация только после абстракций
@@ -23,7 +24,12 @@ import java.nio.channels.Pipe;
 
 
 
-Инкапсуляция  - св-во системы, позвол объединить поля и методы класса, иногда скрыв детали реализации
+Инкапсуляция - св-во системы, позвол объединить поля и методы класса, иногда скрыв детали реализации
+Наследование - св-во системы, повзол опсать новый класс на основе существующего, с частичной или полностью
+                заимствующейся функциональностью
+                класс, от которого создается - родитель
+                класс, который создается - наследник или производный класс
+
 */
 public class lec1 {
     public static void main(String[] args) {
@@ -35,9 +41,11 @@ public class lec1 {
         System.out.println(b);
         System.out.println(Point.distance(a,b));
 
-        Robot robot = new Robot("G12", 1);
-        robot.start();
-        robot.stop();
+        Robot robot = new Robot("G12");
+        robot.power();
+        robot.work();
+        robot.power();
+        robot.work();
     }
 
 }
@@ -82,34 +90,86 @@ class Point{
 
 
 class Robot{
-    private String name;
-    private int level;
 
-    Robot(String name, int level){
-        this.name = name;
-        this.level = level;
+    enum State{
+        On, Off
     }
 
-    public void start(){
+    private static int defaultIndex;
+    private static ArrayList<String> names;
+
+    static {
+        defaultIndex = 1;
+        names = new ArrayList<String>();
+    }
+
+    private String name;
+    private int level;
+    private State state;
+
+     /**
+     * new Robot
+     * @param name Name
+     * @param level Level
+     */
+    private Robot(String name, int level){
+        if((name.isEmpty())
+        || Character.isDigit(name.charAt(0))
+        || Robot.names.contains(name)){
+            this.name = String.format("DefaultName_%d",defaultIndex++);
+        }
+        else{
+            this.name = name;
+        }
+
+        Robot.names.add(name);
+        this.level = level;
+        this.state = State.Off;
+    }
+
+    Robot(String name){
+        this(name, 1);
+    }
+
+    Robot(){
+        this("");
+    }
+
+    public void power(){
+        if(this.state == State.Off){
+            this.start();
+            this.state = State.On;
+        }else{
+            this.stop();
+            this.state = State.Off;
+        }
+    }
+
+    public void work(){
+        if(this.state == State.On){
+            System.out.println("Working...");
+        }
+    }
+    private void start(){
         this.startOS();
         this.hi();
     }
 
-    public void stop(){
+    private void stop(){
         this.stopOS();
         this.goodBye();
     }
 
     private void startOS(){
-        System.out.println("Start");
+        System.out.println("Starting!");
     }
     private void hi(){
         System.out.println("Hi, my name " + name);
     }
     private void stopOS(){
-        System.out.println("Stop");
+        System.out.println("Stop work");
     }
     private void goodBye(){
-        System.out.println("Bye");
+        System.out.println("Bye!");
     }
 }
