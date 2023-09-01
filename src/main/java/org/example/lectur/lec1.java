@@ -1,7 +1,6 @@
 package org.example.lectur;
 
 
-import java.nio.channels.Pipe;
 import java.util.ArrayList;
 
 /*правильное:
