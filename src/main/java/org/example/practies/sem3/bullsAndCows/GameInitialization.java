@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 @Slf4j
 public class GameInitialization {
 
-    static final String PRINTLEN = "what word length you want? input only > 0";
+    private final String PRINTLEN = "what word length you want? input only > 0";
     private final String PRINTATT = "how much attempts you want? input only > 0";
     public void getStart(){
         boolean continueParam = true;
