@@ -1,4 +1,4 @@
-package org.example.practies.sem3.bullsAndCows.abstractGamesClasses;
+package org.example.practies.sem3.bullsAndCows.typeOfGames;
 
 import java.util.ArrayList;
 

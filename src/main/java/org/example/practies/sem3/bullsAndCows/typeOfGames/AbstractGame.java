@@ -1,11 +1,12 @@
-package org.example.practies.sem3.bullsAndCows.abstractGamesClasses;
+package org.example.practies.sem3.bullsAndCows.typeOfGames;
 
-import org.example.practies.sem3.bullsAndCows.Game;
-import org.example.practies.sem3.bullsAndCows.GameStatus;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.example.practies.sem3.bullsAndCows.Answer;
 
 import java.util.ArrayList;
 
+@Slf4j
 public abstract class AbstractGame<T> implements Game {
     Integer wordSize, tryingCount;
     String word;
@@ -16,15 +17,11 @@ public abstract class AbstractGame<T> implements Game {
      * @return слово для угадывания
      */
     public String generateWord(int wordSize){
-
         String alphabet = generateCharList().toString().replaceAll("[,\\s\\[\\]]", "");
-        //TODO убрать при сдаче вывод в консоль списка символов
-        System.out.println(alphabet);
         return RandomStringUtils.random(wordSize, alphabet);
     }
 
     abstract ArrayList<T> generateCharList();
-
 
     @Override
     public void start(Integer wordSize, Integer tryingCount) {
@@ -32,14 +29,19 @@ public abstract class AbstractGame<T> implements Game {
         this.tryingCount = tryingCount;
         this.word = generateWord(wordSize);
         this.gameStatus = GameStatus.START;
+
         System.out.println("подсказка: " + word);
+        log.info("mystery word is '" + word + "'"+
+                " -------- game status is: " + gameStatus);
     }
 
-
-    //TODO обратить внимание на метод при выполнении
     @Override
     public Answer inputValue(String value) {
+
+        gameStatus = GameStatus.PROGRESS;
         tryingCount--;
+        log.info("user try: " + value + ", there are " + tryingCount  +" attempts left"
+        + ", game status is: " + gameStatus);
         int bull = 0;
         int cow = 0;
 
@@ -52,12 +54,17 @@ public abstract class AbstractGame<T> implements Game {
             }
         }
 
+        Answer answer = new Answer(value, bull,cow);
+        log.info("current result: " + answer);
+
         if(word.length() == bull){
             gameStatus = GameStatus.WIN;
+            log.info("game status is -> " + gameStatus);
         }else if(tryingCount == 0 && !gameStatus.equals(GameStatus.WIN)){
             gameStatus = GameStatus.LOSE;
+            log.info("game status is -> " + gameStatus);
         }
-        return new Answer(value, bull,cow);
+        return answer;
     }
 
     @Override

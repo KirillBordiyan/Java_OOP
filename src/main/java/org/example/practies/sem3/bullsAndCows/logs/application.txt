@@ -1,0 +1,73 @@
+2023-09-06 19:55:58 - ======== start with 1 - word size, 1 - max try ========
+2023-09-06 19:55:58 - game status: INIT
+2023-09-06 19:55:58 - mystery word is '0' -------- game status is: START
+2023-09-06 19:56:00 - user try: 0, there are 0 attempts left, game status is: PROGRESS
+2023-09-06 19:56:00 - current result: Answer-> input: 0 bull: 1 cow: 1
+2023-09-06 19:56:00 - game status is -> WIN
+2023-09-06 20:05:47 - ======== start with 0 - word size, 1 - max try ========
+2023-09-06 20:05:47 - game status: INIT
+2023-09-06 20:05:47 - mystery word is '' -------- game status is: START
+2023-09-06 20:05:49 - user try: , there are 0 attempts left, game status is: PROGRESS
+2023-09-06 20:05:49 - current result: Answer-> input:  bull: 0 cow: 0
+2023-09-06 20:05:49 - game status is -> WIN
+2023-09-06 20:10:49 - ======== start with 0 - word size, -2 - max try ========
+2023-09-06 20:10:49 - game status: INIT
+2023-09-06 20:10:49 - mystery word is '' -------- game status is: START
+2023-09-06 20:11:01 - input <=0
+2023-09-06 20:14:43 - ======== start with 0 - word size, 1 - max try ========
+2023-09-06 20:14:43 - game status: INIT
+2023-09-06 20:14:43 - mystery word is '' -------- game status is: START
+2023-09-06 20:19:17 - ======== start with 2 - word size, 2 - max try ========
+2023-09-06 20:19:17 - game status: INIT
+2023-09-06 20:19:17 - mystery word is 'жф' -------- game status is: START
+2023-09-06 20:19:21 - user try: жф, there are 1 attempts left, game status is: PROGRESS
+2023-09-06 20:19:21 - current result: Answer-> input: жф bull: 2 cow: 2
+2023-09-06 20:19:21 - game status is -> WIN
+2023-09-06 20:19:29 - ======== start with 2 - word size, 2 - max try ========
+2023-09-06 20:19:29 - game status: INIT
+2023-09-06 20:19:29 - mystery word is 'xl' -------- game status is: START
+2023-09-06 20:21:40 - ======== start with 1 - word size, 1 - max try ========
+2023-09-06 20:21:40 - game status: INIT
+2023-09-06 20:21:40 - mystery word is 'я' -------- game status is: START
+2023-09-06 20:21:44 - user try: я, there are 0 attempts left, game status is: PROGRESS
+2023-09-06 20:21:44 - current result: Answer-> input: я bull: 1 cow: 1
+2023-09-06 20:21:44 - game status is -> WIN
+2023-09-07 23:39:24 - ======== start with 2 - word size, 2 - max try ========
+2023-09-07 23:39:24 - game status: INIT
+2023-09-07 23:39:24 - mystery word is 'эъ' -------- game status is: START
+2023-09-07 23:39:28 - user try: эъ, there are 1 attempts left, game status is: PROGRESS
+2023-09-07 23:39:28 - current result: Answer-> input: эъ bull: 2 cow: 2
+2023-09-07 23:39:28 - game status is -> WIN
+2023-09-07 23:39:45 - ======== start with 2 - word size, 0 - max try ========
+2023-09-07 23:39:45 - game status: INIT
+2023-09-07 23:39:45 - mystery word is 'dg' -------- game status is: START
+2023-09-07 23:42:09 - ======== start with 2 - word size, 11 - max try ========
+2023-09-07 23:42:09 - game status: INIT
+2023-09-07 23:42:09 - mystery word is 'qf' -------- game status is: START
+2023-09-07 23:42:18 - user try: qf, there are 10 attempts left, game status is: PROGRESS
+2023-09-07 23:42:18 - current result: Answer-> input: qf bull: 2 cow: 2
+2023-09-07 23:42:18 - game status is -> WIN
+2023-09-07 23:44:33 - ======== start with 2 - word size, 2 - max try ========
+2023-09-07 23:44:33 - game status: INIT
+2023-09-07 23:44:33 - mystery word is '32' -------- game status is: START
+2023-09-07 23:44:34 - user try: 32, there are 1 attempts left, game status is: PROGRESS
+2023-09-07 23:44:34 - current result: Answer-> input: 32 bull: 2 cow: 2
+2023-09-07 23:44:34 - game status is -> WIN
+2023-09-07 23:46:04 - ======== start with 2 - word size, 2 - max try ========
+2023-09-07 23:46:04 - game status: INIT
+2023-09-07 23:46:04 - mystery word is 'юъ' -------- game status is: START
+2023-09-07 23:46:08 - user try: юъ, there are 1 attempts left, game status is: PROGRESS
+2023-09-07 23:46:08 - current result: Answer-> input: юъ bull: 2 cow: 2
+2023-09-07 23:46:08 - game status is -> WIN
+2023-09-07 23:46:16 - ======== start with 1 - word size, 1 - max try ========
+2023-09-07 23:46:16 - game status: INIT
+2023-09-07 23:46:16 - mystery word is 's' -------- game status is: START
+2023-09-07 23:46:18 - user try: s, there are 0 attempts left, game status is: PROGRESS
+2023-09-07 23:46:18 - current result: Answer-> input: s bull: 1 cow: 1
+2023-09-07 23:46:18 - game status is -> WIN
+2023-09-07 23:46:28 - ======== start with 2 - word size, 2 - max try ========
+2023-09-07 23:46:28 - game status: INIT
+2023-09-07 23:46:28 - mystery word is '87' -------- game status is: START
+2023-09-07 23:46:30 - user try: 87, there are 1 attempts left, game status is: PROGRESS
+2023-09-07 23:46:30 - current result: Answer-> input: 87 bull: 2 cow: 2
+2023-09-07 23:46:30 - game status is -> WIN

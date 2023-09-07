@@ -1,4 +1,4 @@
-package org.example.practies.sem3.bullsAndCows.abstractGamesClasses;
+package org.example.practies.sem3.bullsAndCows;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,9 +14,9 @@ public class Answer {
 
     @Override
     public String toString() {
-        return "Answer: \n" +
+        return "Answer-> " +
                 "input: " + userInput+
-                "\nbull: " + bull +
-                "\ncow: " + cow;
+                " bull: " + bull +
+                " cow: " + cow;
     }
 }
