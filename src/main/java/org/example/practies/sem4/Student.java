@@ -8,12 +8,10 @@ import lombok.ToString;
 @Setter
 public class Student extends User{
 
-    String academicPerformance;
-    int age;
-    public Student(String fio, String academicPerformance, int age) {
-        super(fio);
+    int academicPerformance;
+    public Student(String fio, int age, int academicPerformance) {
+        super(fio, age);
         this.academicPerformance = academicPerformance;
-        this.age = age;
     }
 
     @Override

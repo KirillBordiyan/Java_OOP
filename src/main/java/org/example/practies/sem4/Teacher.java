@@ -10,8 +10,8 @@ public class Teacher extends User{
 
     String subject;
     int salary;
-    public Teacher(String fio, String subject, int salary) {
-        super(fio);
+    public Teacher(String fio, int age, String subject, int salary) {
+        super(fio, age);
         this.subject = subject;
         this.salary = salary;
     }
@@ -20,6 +20,7 @@ public class Teacher extends User{
     public String toString(){
         return "Teacher: " + fio
                 +", subject: " + subject
-                +", salary: " + salary;
+                +", salary: " + salary
+                +", age: " + age;
     }
 }
