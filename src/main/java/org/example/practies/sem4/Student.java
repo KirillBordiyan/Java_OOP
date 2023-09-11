@@ -14,6 +14,10 @@ public class Student extends User{
         this.academicPerformance = academicPerformance;
     }
 
+    public Student(String fio, int age){
+        this(fio, age, 0);
+    }
+
     @Override
     public String toString(){
         return "Student: " + fio

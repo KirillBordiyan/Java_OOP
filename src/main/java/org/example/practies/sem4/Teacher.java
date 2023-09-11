@@ -16,6 +16,10 @@ public class Teacher extends User{
         this.salary = salary;
     }
 
+    public Teacher(String fio, int age){
+        this(fio, age, "---", 0);
+    }
+
     @Override
     public String toString(){
         return "Teacher: " + fio

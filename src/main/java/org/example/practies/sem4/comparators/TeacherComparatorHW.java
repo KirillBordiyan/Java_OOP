@@ -1,11 +1,10 @@
 package org.example.practies.sem4.comparators;
 
 import org.example.practies.sem4.Teacher;
-import org.example.practies.sem4.User;
 
 import java.util.Comparator;
 
-public class TeacherComparator implements Comparator<Teacher> {
+public class TeacherComparatorHW implements Comparator<Teacher> {
 
     @Override
     public int compare(Teacher t1, Teacher t2) {
