@@ -1,4 +1,4 @@
-package org.example.practies.sem6.books;
+package org.example.practies.sem6.library.books;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,16 +9,16 @@ import java.util.List;
 @Getter
 @Setter
 public class Library implements Searchable{
-    private List<Book> books;
+    private List<Book> books = new ArrayList<>();
 
     public Library(List<Book> books) {
-        this.books = new ArrayList<>();
+        this.books = books;
     }
 
     @Override
     public List<Book> findByAuthor(String author) {
         return books.stream()
-                .filter(book -> book.getAuthor().equals(author))
+                .filter(book -> author.equals(book.getAuthor()))
                 .toList();
     }
 }

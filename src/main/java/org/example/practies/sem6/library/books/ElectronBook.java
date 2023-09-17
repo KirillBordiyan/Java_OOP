@@ -1,9 +1,9 @@
-package org.example.practies.sem6.books;
+package org.example.practies.sem6.library.books;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.example.practies.sem6.genre.BookGenre;
+import org.example.practies.sem6.library.genre.BookGenre;
 
 @Getter
 @Setter

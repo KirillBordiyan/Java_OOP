@@ -1,4 +1,4 @@
-package org.example.practies.sem6.genre;
+package org.example.practies.sem6.library.genre;
 
 import lombok.ToString;
 
