@@ -1,4 +1,4 @@
-package org.example.practies.sem6;
+package org.example.practies.sem6.genre.books;
 
 import lombok.Getter;
 import lombok.Setter;
