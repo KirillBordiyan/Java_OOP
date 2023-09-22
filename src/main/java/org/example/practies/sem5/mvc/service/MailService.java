@@ -4,10 +4,10 @@ import org.example.practies.sem5.mvc.data.Mail;
 
 public class MailService implements MailInterface{
 
-//    @Override
-//    public String sendMail(Mail mail) {
-//        return "mail: `" + mail + "` send";
-//    }
+    @Override
+    public String sendMail(Mail mail) {
+        return "mail: `" + mail + "` send";
+    }
 
     @Override
     public void returnMailBack(String mail) {

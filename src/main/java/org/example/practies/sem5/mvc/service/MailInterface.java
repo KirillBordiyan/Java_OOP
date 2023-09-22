@@ -5,7 +5,7 @@ import org.example.practies.sem5.mvc.data.Mail;
 
 public interface MailInterface {
 
-//    void sendMail(Mail mail);
+    String sendMail(Mail mail);
     void returnMailBack(String mail);
     void deleteMail();
     void getMail();

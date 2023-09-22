@@ -20,7 +20,7 @@ public class Controller {
         while(flag){
             switch (scanner.nextLine()) {
                 case "1" -> {
-                    mailService.sendMail(mail);
+//                    mailService.sendMail(mail);
                 }
                 case "2" -> {
                     mailService.returnMailBack(scanner.nextLine());
